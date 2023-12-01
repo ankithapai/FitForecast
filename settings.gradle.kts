@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FitForecast"
+rootProject.name = "Firemc"
 include(":app")
+ 

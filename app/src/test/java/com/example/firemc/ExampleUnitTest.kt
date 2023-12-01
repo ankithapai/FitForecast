@@ -1,4 +1,4 @@
-package com.example.fitforecast
+package com.example.firemc
 
 import org.junit.Test
 

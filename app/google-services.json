@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "843072846070",
+    "project_id": "firemc-d42ea",
+    "storage_bucket": "firemc-d42ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843072846070:android:45ce1e4cf0b4c3834154d7",
+        "android_client_info": {
+          "package_name": "com.example.firemc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzZUv74p9HTyKPhinOoJnWeI0zqXnrt7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
