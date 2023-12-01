@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <!-- Light maroon color -->
 
     <ImageView
         android:id="@+id/myImageView"
@@ -49,7 +48,6 @@
         android:layout_marginStart="44dp"
         android:layout_marginTop="161dp"
         android:background="#7B241C"
-        android:text="Sunkist Hospital - 0.6 miles"
         android:textColor="#FFFFFF" />
 
     <Button
@@ -62,7 +60,6 @@
         android:layout_marginStart="45dp"
         android:layout_marginTop="224dp"
         android:background="#7B241C"
-        android:text="Banner Health  - 1.2 miles"
         android:textColor="#FFFFFF" />
 
     <Button
@@ -75,7 +72,6 @@
         android:layout_marginStart="45dp"
         android:layout_marginTop="285dp"
         android:background="#7B241C"
-        android:text="Hu Hu Kam Hospital - 1.6 miles"
         android:textColor="#FFFFFF" />
 
     <Button
@@ -87,8 +83,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginBottom="261dp"
         android:background="#7B241C"
-        android:textColor="#FFFFFF"
-        android:text="START:12:30:00 - END:13:30:00 \n DURATION: 1:00:00 \n ACTIVITY: CORONADO PARK" />
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/buttona2"
@@ -100,8 +95,7 @@
         android:layout_marginStart="42dp"
         android:layout_marginBottom="185dp"
         android:background="#7B241C"
-        android:textColor="#FFFFFF"
-        android:text="START:14:00:00 - END:16:30:00 \n DURATION: 2:30:00 \n ACTIVITY: PHOENIX COUNTRY CLUB" />
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/buttona3"
@@ -113,8 +107,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginBottom="114dp"
         android:background="#7B241C"
-        android:textColor="#FFFFFF"
-        android:text="START:18:00:30 - END:11:59:59 \n DURATION: 5:59:59 \n ACTIVITY: ENCANTO 18" />
+        android:textColor="#FFFFFF"/>
 
 
 </RelativeLayout>
