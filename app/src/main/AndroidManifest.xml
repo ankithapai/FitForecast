@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitForecast"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@drawable/protein_progress"/>
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".CalorieActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.FitForecast">
+            android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

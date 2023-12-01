@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalorieActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bulk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Bulk Up" />
+
+        <Button
+            android:id="@+id/lean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="Lean" />
+
+        <Button
+            android:id="@+id/maintain"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:text="Maintain" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/calorieIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="181dp"
+        android:text="Calories"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="231dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="323dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ProgressBar
+            android:id="@+id/protein_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="118dp"
+            android:layout_height="124dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="30"
+            android:progressDrawable="@drawable/protein_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.989"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.682" />
+
+        <ProgressBar
+            android:id="@+id/fat_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="118dp"
+            android:layout_height="124dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="25"
+            android:progressDrawable="@drawable/fat_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.682" />
+
+        <ProgressBar
+            android:id="@+id/carb_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="118dp"
+            android:layout_height="124dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="45"
+            android:progressDrawable="@drawable/carb_progress"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.682" />
+
+        <TextView
+            android:id="@+id/fat_split_text"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="315dp"
+            android:text=""
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/fat_split"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="300dp"
+            android:text="FAT"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/carbs_split"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="202dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="162dp"
+            android:text="CARB"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/carbs_split_text"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="202dp"
+            android:layout_marginTop="126dp"
+            android:layout_marginEnd="178dp"
+            android:text=""
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.704"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/protein_split"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="306dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="33dp"
+            android:text="PROTEIN"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/protein_split_text"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="306dp"
+            android:layout_marginTop="122dp"
+            android:layout_marginEnd="33dp"
+            android:text=""
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <Button-->
+    <!--        android:id="@+id/bulk"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Bulk Up"-->
+    <!--        tools:layout_editor_absoluteX="31dp"-->
+    <!--        tools:layout_editor_absoluteY="34dp" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/lean"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:layout_marginEnd="52dp"-->
+    <!--        android:text="Lean"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/maintain"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Maintain"-->
+    <!--        tools:layout_editor_absoluteX="151dp"-->
+    <!--        tools:layout_editor_absoluteY="34dp" />-->
+
+    <TextView
+        android:id="@+id/exercise"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="486dp"
+        android:layout_marginEnd="142dp"
+        android:text="Exercise recommendation"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/exerciseSuggestion"
+        android:layout_width="151dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="25dp"
+        android:text=""
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
