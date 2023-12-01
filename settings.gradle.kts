@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FitForecast"
+rootProject.name = "FitForecast_Location"
 include(":app")
