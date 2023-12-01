@@ -223,7 +223,7 @@ class MainActivity : ComponentActivity() {
 
     private fun findNearesthospital(location: Location) {
         Log.d(TAG, "Inside findNearestRestaurants")
-        val apiKey = "AIzaSyCJsvNlrpjMuPep1ijjZ6NYyTfquh1w9YU" // Replace with your actual API key
+        val apiKey = "x" // Replace with API key
         val radius = 10000// Radius in meters
         val locationStr = "${location.latitude},${location.longitude}"
         val type = "hospital"
