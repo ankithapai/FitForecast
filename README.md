@@ -13,7 +13,6 @@ A valid Google Maps API Key for accessing location services.
 
 # Setup and Installation
 Clone the Repository: Clone this repository to your local machine or download the code.
-git clone https://github.com/your-username/fitforecast-location.git
 Open the Project: Open the project in Android Studio.
 Add API Key: Add your Google Maps API Key in the Places.initialize() method in the MainActivity.
 Places.initialize(applicationContext, "YOUR_API_KEY")
