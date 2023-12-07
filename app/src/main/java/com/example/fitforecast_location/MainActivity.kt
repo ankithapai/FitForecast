@@ -163,7 +163,6 @@ class MainActivity : ComponentActivity() {
         val radius = 10000 // Search radius in meters
         val type = "hospital"
         val apiKey = "AIzaSyCJ0xv8NRQa8ymM71e7RzEPlkxYH9u72QQ" // Replace with your actual API key
-
         val url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
                 "location=$latitude,$longitude&radius=$radius&type=$type&key=$apiKey"
 
