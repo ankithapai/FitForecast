@@ -1,13 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.FitForecast" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
         <!-- Primary Brand Color-->
         <item name="colorPrimary">@color/my_primary</item>
         <item name="colorPrimaryVariant">@color/my_primary</item>
         <item name="colorOnPrimary">@color/white</item>
-        
+
         <!-- Secondary Brand Color-->
         <item name="colorSecondary">@color/my_secondary</item>
         <item name="colorSecondaryVariant">@color/my_secondary</item>
@@ -16,6 +16,4 @@
         <!-- Status Bar Color-->
         <item name="android:statusBarColor">@color/my_primary</item>
     </style>
-
-    <style name="Theme.FitForecast" parent="Base.Theme.FitForecast" />
 </resources>

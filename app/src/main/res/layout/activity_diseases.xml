@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_third"
+        android:alpha="0.5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp"
+        android:layout_above="@+id/cardView_DiseasesList">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fitforecastlogo"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_DiseasesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Any Prior/Current conditions:"
+            android:textSize="20sp"
+            android:textColor="@color/my_primary"
+            android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Diabetes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diabetes"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Diabetes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Hypertension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hypertension"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Hypertension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Heart_Disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Heart Disease"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Heart_Disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Asthma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asthma"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Asthma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Obesity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Obesity"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Obesity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Arthritis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arthritis"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Arthritis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Depression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Depression"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Depression"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Kidney_Disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kidney Disease"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Kidney_Disease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Osteoporosis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Osteoporosis"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Osteoporosis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="42dp">
+                <TextView
+                    android:id="@+id/TextView_Migraine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Migraine"
+                    android:textSize="16sp"
+                    android:layout_centerVertical="true"/>
+                <RatingBar
+                    android:id="@+id/RatingBar_Migraine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75" />
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/MaterialButton_Submit"
+                    android:layout_width="200dp"
+                    android:layout_height="60dp"
+                    android:text="SUBMIT"
+                    app:cornerRadius="30dp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

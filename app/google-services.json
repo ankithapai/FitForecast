@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "831341874672",
+    "project_id": "fitforecast-55eb9",
+    "storage_bucket": "fitforecast-55eb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831341874672:android:fb6b2eeeb333e191d52135",
+        "android_client_info": {
+          "package_name": "asu.rsihara.fitforecast"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMcMJrbB9RDyy69lgXKf8zYfJX9ppiX_8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

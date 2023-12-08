@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Light maroon color -->
+
+    <ImageView
+        android:id="@+id/myImageView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:src="@drawable/fitforecastlogo" />
+
+    <TextView
+        android:id="@+id/healthcheckup"
+        android:layout_width="338dp"
+        android:layout_height="104dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="29dp"
+        android:text="Your Health Check-up is due in 2 weeks. Click on the provider of your choice to add to calender"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/agenda"
+        android:layout_width="347dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="266dp"
+        android:text="You have the following breaks today. \nChoose your activity to add to calender"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/buttonhc1"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="199dp"
+        android:background="#7B241C"
+        android:text="Sunkist Hospital - 0.6 miles"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonhc2"
+        android:layout_width="337dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="269dp"
+        android:background="#7B241C"
+        android:text="Banner Health  - 1.2 miles"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonhc3"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="323dp"
+        android:background="#7B241C"
+        android:text="Hu Hu Kam Hospital - 1.6 miles"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttona1"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="203dp"
+        android:background="#7B241C"
+        android:text="1"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttona2"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="133dp"
+        android:background="#7B241C"
+        android:text="2"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttona3"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="64dp"
+        android:background="#7B241C"
+        android:text="3"
+        android:textColor="#FFFFFF" />
+
+
+</RelativeLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_third"
+        android:alpha="0.5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp"
+        android:layout_above="@+id/cardView_user_input">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fitforecastlogo"/>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_user_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter User Details"
+                android:textSize="16sp"
+                android:textColor="@color/my_primary"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"/>
+           <EditText
+               android:id="@+id/editText_PersonName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:inputType="textPersonName"
+               android:drawableEnd="@drawable/done_icon"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age"/>
+                <EditText
+                    android:id="@+id/editText_Age"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Height (Mts)"/>
+                <EditText
+                    android:id="@+id/editText_Height"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:inputType="numberDecimal"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Weight (Kgs)"/>
+                <EditText
+                    android:id="@+id/editText_Weight"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:inputType="numberDecimal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Goal Weight (Kgs)"/>
+                <EditText
+                    android:id="@+id/editText_GoalWeight"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:inputType="numberDecimal"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Number of Days"/>
+                <EditText
+                    android:id="@+id/editText_GoalDays"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Calories (Intake)"/>
+                <EditText
+                    android:id="@+id/editText_CaloriesIntake"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:inputType="numberDecimal"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="If you have any prior/current conditions:"
+                android:textStyle="bold"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/MaterialButton_Diseases"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Fill Entry Form"
+                app:cornerRadius="30dp"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOALS:"
+                android:textColor="@color/my_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left">
+                <CheckBox
+                    android:id="@+id/CheckBox_Health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health Monitoring"
+                    android:layout_centerVertical="true"/>
+
+                <CheckBox
+                    android:id="@+id/CheckBox_Calorie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calorie"
+                    android:layout_centerVertical="true"/>
+
+                <CheckBox
+                    android:id="@+id/CheckBox_Exercise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exercise"
+                    android:layout_centerVertical="true"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/MaterialButton_Submit"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Submit"
+                    app:cornerRadius="30dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/MaterialButton_Predict"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:text="Predict"
+                    app:cornerRadius="30dp"
+                    android:layout_marginLeft="50dp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
