@@ -17,15 +17,18 @@
 
     <TextView
         android:id="@+id/healthcheckup"
-        android:layout_width="352dp"
-        android:layout_height="wrap_content"
+        android:layout_width="338dp"
+        android:layout_height="104dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="114dp"
-        android:text="Your Health Check-up is due in 2 weeks. \n Click on the provider of your choice to add to calender"
-        android:textColor="@color/black" />
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="29dp"
+        android:text="Your Health Check-up is due in 2 weeks. Click on the provider of your choice to add to calender"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/agenda"
@@ -33,11 +36,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginBottom="340dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="299dp"
+        android:text="You have the following breaks today. \nChoose your activity to add to calender"
         android:textColor="@color/black"
-        android:text="You have the following breaks today. \n Choose your activity to add to calender" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/buttonhc1"
@@ -46,8 +50,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="161dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="251dp"
         android:background="#7B241C"
         android:text="Sunkist Hospital - 0.6 miles"
         android:textColor="#FFFFFF" />
@@ -59,8 +63,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="324dp"
         android:background="#7B241C"
         android:text="Banner Health  - 1.2 miles"
         android:textColor="#FFFFFF" />
@@ -71,9 +75,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="285dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="398dp"
         android:background="#7B241C"
         android:text="Hu Hu Kam Hospital - 1.6 miles"
         android:textColor="#FFFFFF" />
@@ -84,11 +88,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="261dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginBottom="213dp"
         android:background="#7B241C"
-        android:textColor="#FFFFFF"
-        android:text="START:12:30:00 - END:13:30:00 \n DURATION: 1:00:00 \n ACTIVITY: CORONADO PARK" />
+        android:text="1"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/buttona2"
@@ -97,11 +102,11 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="42dp"
-        android:layout_marginBottom="185dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="133dp"
         android:background="#7B241C"
-        android:textColor="#FFFFFF"
-        android:text="START:14:00:00 - END:16:30:00 \n DURATION: 2:30:00 \n ACTIVITY: PHOENIX COUNTRY CLUB" />
+        android:text="2"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/buttona3"
@@ -111,10 +116,10 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="114dp"
+        android:layout_marginBottom="51dp"
         android:background="#7B241C"
-        android:textColor="#FFFFFF"
-        android:text="START:18:00:30 - END:11:59:59 \n DURATION: 5:59:59 \n ACTIVITY: ENCANTO 18" />
+        android:text="3"
+        android:textColor="#FFFFFF" />
 
 
 </RelativeLayout>

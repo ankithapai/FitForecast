@@ -107,6 +107,39 @@ class MainActivity : ComponentActivity() {
         } else {
             requestCalendarReadPermission()
         }
+
+        buttona1.setOnClickListener {
+            val parkName = buttona1.text.toString()
+            if (parkName != "Park Not Found") {
+                if (hasCalendarPermission()) {
+                    addToCalendar(parkName)
+                } else {
+                    requestCalendarPermission()
+                }
+            }
+        }
+
+        buttona2.setOnClickListener {
+            val parkName = buttona2.text.toString()
+            if (parkName != "Park Not Found") {
+                if (hasCalendarPermission()) {
+                    addToCalendar(parkName)
+                } else {
+                    requestCalendarPermission()
+                }
+            }
+        }
+
+        buttona3.setOnClickListener {
+            val parkName = buttona3.text.toString()
+            if (parkName != "Park Not Found") {
+                if (hasCalendarPermission()) {
+                    addToCalendar(parkName)
+                } else {
+                    requestCalendarPermission()
+                }
+            }
+        }
     }
 
 
@@ -136,6 +169,16 @@ class MainActivity : ComponentActivity() {
                                 buttonhc1.text = hospitals.getOrNull(0) ?: "Hospital Not Found"
                                 buttonhc2.text = hospitals.getOrNull(1) ?: "Hospital Not Found"
                                 buttonhc3.text = hospitals.getOrNull(2) ?: "Hospital Not Found"
+                            }
+                        }
+
+                        // Fetch parks and update UI
+                        fetchNearbyParks(location) { parks ->
+                            runOnUiThread {
+                                val delimiter = " \n At: "
+                                buttona1.text = "${parks.getOrNull(0) ?: "Park Not Found"}${delimiter}${buttona1.text.split(delimiter).getOrNull(1)}"
+                                buttona2.text = "${parks.getOrNull(1) ?: "Park Not Found"}${delimiter}${buttona2.text.split(delimiter).getOrNull(1)}"
+                                buttona3.text = "${parks.getOrNull(2) ?: "Park Not Found"}${delimiter}${buttona3.text.split(delimiter).getOrNull(1)}"
                             }
                         }
                     }
@@ -202,6 +245,58 @@ class MainActivity : ComponentActivity() {
             }
         })
     }
+
+    private fun fetchNearbyParks(location: Location?, callback: (List<String>) -> Unit) {
+        if (location == null) {
+            callback(emptyList())
+            return
+        }
+
+        val httpClient = OkHttpClient()
+        val latitude = location.latitude
+        val longitude = location.longitude
+        val radius = 10000 // Search radius in meters
+        val type = "park"
+        val apiKey = "AIzaSyCJ0xv8NRQa8ymM71e7RzEPlkxYH9u72QQ" // Replace with your actual API key
+        val url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?" +
+                "location=$latitude,$longitude&radius=$radius&type=$type&key=$apiKey"
+
+        val request = Request.Builder()
+            .url(url)
+            .build()
+
+        httpClient.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                // Handle failure
+                callback(emptyList())
+            }
+
+            override fun onResponse(call: Call, response: Response) {
+                val responseString = response.body?.string()
+                val parks = mutableListOf<String>()
+
+                if (responseString != null) {
+                    val jsonResponse = JSONObject(responseString)
+                    val results = jsonResponse.getJSONArray("results")
+                    for (i in 0 until results.length()) {
+                        val place = results.getJSONObject(i)
+                        val name = place.getString("name")
+                        val placeLocation = place.getJSONObject("geometry").getJSONObject("location")
+                        val parkLatitude = placeLocation.getDouble("lat")
+                        val parkLongitude = placeLocation.getDouble("lng")
+
+                        val distance = calculateDistance(location, parkLatitude, parkLongitude)
+                        val distanceInKm = distance / 1000  // Convert meters to kilometers
+                        val parkInfo = "$name - ${"%.2f".format(distanceInKm)} km"
+
+                        parks.add(parkInfo)
+                    }
+                }
+
+                callback(parks)
+            }
+        })
+    }
     companion object {
         private const val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1
         private const val PERMISSIONS_REQUEST_CALENDAR = 2
@@ -263,7 +358,7 @@ class MainActivity : ComponentActivity() {
             data = CalendarContract.Events.CONTENT_URI
             putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, startTime.timeInMillis)
             putExtra(CalendarContract.EXTRA_EVENT_END_TIME, endTime.timeInMillis)
-            putExtra(CalendarContract.Events.TITLE, "Hospital Visit to $hospitalName")
+            putExtra(CalendarContract.Events.TITLE, "Visit to $hospitalName")
             putExtra(CalendarContract.Events.EVENT_LOCATION, hospitalName)
             putExtra(CalendarContract.Events.AVAILABILITY, CalendarContract.Events.AVAILABILITY_BUSY)
         }
@@ -340,7 +435,10 @@ class MainActivity : ComponentActivity() {
             val durationMinutes = gapDuration / 60000 // Convert to minutes
             val format = SimpleDateFormat("HH:mm", Locale.getDefault())
             val text = "${format.format(startTime)} - ${format.format(endTime)} ($durationMinutes min)"
-            buttons.getOrNull(index)?.text = text
+            val button = buttons.getOrNull(index)
+            if (button != null) {
+                button.text = " \n At: $text"
+            }
+            }
         }
-    }
 }
